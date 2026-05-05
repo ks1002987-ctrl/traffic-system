@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Management</title>
+</head>
+<body>
+    <h1>Traffic Management System</h1>
+
+    <form action="/add" method="POST">
+        Location: <input type="text" name="location"><br><br>
+        Vehicle Count: <input type="number" name="count"><br><br>
+        Signal Status:
+        <select name="signal">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Yellow</option>
+        </select><br><br>
+        <button type="submit">Add Data</button>
+    </form>
+
+    <h2>Traffic Data</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Vehicles</th>
+            <th>Signal</th>
+            <th>Action</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td><a href="/delete/{{ row[0] }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

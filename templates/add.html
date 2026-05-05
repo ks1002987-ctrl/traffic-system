@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Add Traffic Record{% endblock %}
+{% block content %}
+    <h2>Add Traffic Record</h2>
+    <form method="POST">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="e.g. 5th Avenue & Main St" required>
+
+        <label for="vehicle_count">Vehicle Count</label>
+        <input type="number" id="vehicle_count" name="vehicle_count" min="0" placeholder="e.g. 42" required>
+
+        <label for="signal_status">Signal Status</label>
+        <select id="signal_status" name="signal_status" required>
+            <option value="Red">Red</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green" selected>Green</option>
+        </select>
+
+        <button type="submit">Save Record</button>
+    </form>
+{% endblock %}
