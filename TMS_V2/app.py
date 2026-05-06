@@ -1,4 +1,4 @@
-
+import os
 from flask_mysqldb import MySQL
 from datetime import datetime
 
@@ -7,7 +7,7 @@ app.secret_key = 'tms_secret_key'
 
 app.config['MYSQL_HOST'] = 'mysql-1bc783e2-ks1002987-c94b.i.aivencloud.com'
 app.config['MYSQL_USER'] = 'avnadmin'
-app.config['MYSQL_PASSWORD'] = 'DUMMY'
+app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD', '')
 app.config['MYSQL_DB'] = 'defaultdb'
 app.config['MYSQL_PORT'] = 22794
 
