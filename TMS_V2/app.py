@@ -7,7 +7,7 @@ app.secret_key = 'tms_secret_key'
 
 app.config['MYSQL_HOST'] = 'mysql-1bc783e2-ks1002987-c94b.i.aivencloud.com'
 app.config['MYSQL_USER'] = 'avnadmin'
-app.config['MYSQL_PASSWORD'] = 'AVNS_S7Yaa7bzjgnXuaAH64h'
+app.config['MYSQL_PASSWORD'] = 'DUMMY'
 app.config['MYSQL_DB'] = 'defaultdb'
 app.config['MYSQL_PORT'] = 22794
 
